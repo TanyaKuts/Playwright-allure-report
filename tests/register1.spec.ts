@@ -6,8 +6,8 @@ test('successful register', async ({ page }) => {
 
   await registerPage.goto();
   await registerPage.registerLink.click();
-  await registerPage.register('gideon9', '12345678', '12345678', 'First', 'Last', 'gideoncenter9@gmail.com');
-  await expect(page.locator('#flash_notice')).toHaveText('Account was successfully created. An email containing the instructions to activate your account was sent to gideoncenter9@gmail.com.');
+  await registerPage.register('gideon11', '12345678', '12345678', 'First', 'Last', 'gideoncenter11@gmail.com');
+  await expect(page.locator('#flash_notice')).toHaveText('Account was successfully created. An email containing the instructions to activate your account was sent to gideoncenter11@gmail.com.');
 })
 
 test('invalid password confirmation register', async ({ page }) => {
@@ -15,7 +15,7 @@ test('invalid password confirmation register', async ({ page }) => {
 
   await registerPage.goto();
   await registerPage.registerLink.click();
-  await registerPage.register('gideon10', '12345678', '12345679', 'First', 'Last', 'gideoncenter10@gmail.com');
+  await registerPage.register('gideon12', '12345678', '12345679', 'First', 'Last', 'gideoncenter12@gmail.com');
   //await expect(page.locator('#errorExplanation')).toHaveText('Login is invalid', 'Password doesn't match confirmation');
 })
 
@@ -24,7 +24,7 @@ test('invalid password register', async ({ page }) => {
 
   await registerPage.goto();
   await registerPage.registerLink.click();
-  await registerPage.register('gideon8', '1234567', '1234567', 'First', 'Last', 'gideoncenter8@gmail.com');
+  await registerPage.register('gideon13', '1234567', '1234567', 'First', 'Last', 'gideoncenter13@gmail.com');
   await expect(page.locator('#errorExplanation')).toHaveText('Password is too short (minimum is 8 characters)');
 
   /* register click
